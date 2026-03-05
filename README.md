@@ -1,58 +1,51 @@
-# 🅿️ Parking Spot Classifier
+# Parking Spot Classifier
 
-A machine learning model that classifies parking spots as **empty** or **not empty** using Support Vector Machine (SVM).
+A computer vision model that classifies parking spots as **empty** or **not empty** using SVM with GridSearchCV hyperparameter tuning.
 
-## 📌 Description
-This project uses computer vision and machine learning to detect whether a parking spot is empty or occupied. It uses SVM with GridSearchCV for hyperparameter tuning to find the best model.
+![Python](https://img.shields.io/badge/Python-3.12-blue) ![scikit-learn](https://img.shields.io/badge/scikit--learn-1.0-orange) ![License](https://img.shields.io/badge/license-MIT-green)
 
-## 🗂️ Project Structure
-parking-spot-classifier/
-├── data/               # Dataset (empty/not_empty images)
-├── models/             # Saved trained model
-├── notebooks/          # Jupyter notebook for exploration
-├── src/
-│   ├── config.py       # All settings and parameters
-│   ├── prepare_data.py # Data loading and preprocessing
-│   ├── train.py        # Model training and evaluation
-│   └── predict.py      # Predict on new images
-├── requirements.txt
-└── README.md
+## Installation
 
-## 🛠️ Installation
-1. Clone the repository:
+```bash
 git clone https://github.com/YOUR_USERNAME/parking-spot-classifier.git
 cd parking-spot-classifier
-
-2. Create a virtual environment:
-python -m venv venv
-source venv/bin/activate
-
-3. Install dependencies:
 pip install -r requirements.txt
+```
 
-## 🚀 Usage
+## Usage
 
-### Train the model:
+**Train the model:**
+```bash
 cd src
 python train.py
+```
 
-### Predict on a new image:
+**Predict on a new image:**
+```bash
 python predict.py --image_path ../data/dataset/empty/your_image.jpg
+```
 
-## 📊 Results
-- Train Accuracy: 100%
-- Test Accuracy: 100%
+## Results
 
-## 🧠 Model Details
-- Algorithm: Support Vector Machine (SVC)
-- Image size: 64x64
-- Hyperparameter tuning: GridSearchCV
-- Parameters tuned: C and gamma
+| Metric | Score |
+|--------|-------|
+| Train Accuracy | 86.39% |
+| Test Accuracy | 89.24% |
 
-## 🛠️ Tech Stack
-- Python
-- scikit-learn
-- scikit-image
-- NumPy
-- Matplotlib
-- Jupyter Notebook
+## Project Structure
+
+```
+parking-spot-classifier/
+├── data/               # Dataset (empty/not_empty)
+├── models/             # Saved model
+├── notebooks/          # Jupyter exploration
+├── src/
+│   ├── config.py       # Settings and parameters
+│   ├── prepare_data.py # Data loading and preprocessing
+│   ├── train.py        # Training and evaluation
+│   └── predict.py      # Inference on new images
+└── requirements.txt
+```
+
+## Tech Stack
+Python · scikit-learn · scikit-image · NumPy · Matplotlib · Jupyter
