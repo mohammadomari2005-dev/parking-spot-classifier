@@ -8,7 +8,7 @@ from config import *
 model = pickle.load(open('../models/model.p', 'rb'))
 spots = pickle.load(open('../data/spots.p', 'rb'))
 
-video = cv2.VideoCapture('../data/videos/parking_1920_1080_loop.mp4')
+video = cv2.VideoCapture('../data/videos/parking_1920_1080.mp4')
 
 frame_count = 0
 spot_colors = [(0, 0, 255)] * len(spots)
