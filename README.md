@@ -25,6 +25,12 @@ python train.py
 python predict.py --image_path ../data/dataset/empty/your_image.jpg
 ```
 
+
+**Live parking spot detector:**
+```bash
+python live_detector.py --video_path ../data/videos/parking_1920_1080.mp4
+```
+
 ## Results
 
 | Metric | Score |
@@ -44,6 +50,8 @@ parking-spot-classifier/
 │   ├── prepare_data.py # Data loading and preprocessing
 │   ├── train.py        # Training and evaluation
 │   └── predict.py      # Inference on new images
+│   └── live_detector.py      #  Live parking detector 
+│   └── select_spots.py      #  Select all spots for new parking (Used Once)
 └── requirements.txt
 ```
 
